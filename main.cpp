@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -13,13 +14,18 @@ int main() {
   {
     cin >> current[i];
 
-    power[i] = resistance[i] * pow(current[i],2);
+    power[i] = resistance[i] * pow(current[i], 2);
     
   }
-
+    // header
+    cout << "Current" << "|" << setw(15) << "Resistance" << "|" << setw(15) << "Power" << "|" << endl;
+    cout << "-------|---------------|---------------|" << endl;
+    
+  
   for(int i = 0; i < 5; i++)
     {
-    cout << power[i] << endl;
+    cout << setw(7) << current[i] << "|" << setw(15) << resistance[i] << "|" << setw(15) << power[i] << "|" << endl;
       
     }
+  
 }
